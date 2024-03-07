@@ -3,26 +3,11 @@
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-/* .heroes {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    margin-top: 50px;
-} */
-
 .hero {
     background-color: var(--secondary-color);
     color: white;
     padding: 20px 50px;
     margin: 0 20px;
     font-size: 30px;
-    /* width: 100vw; */
-}
-
-#hero-one {
-    margin-left: 0px;
-}
-
-#hero-four {
-    margin-right: 0px;
+    text-decoration: none;
 }

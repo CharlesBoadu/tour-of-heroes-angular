@@ -16,6 +16,10 @@ export class HeroesService {
     return this.heroList;
   }
 
+  getHeroById(id: number) {
+    return this.heroList.find(hero => hero.id === id);
+  }
+
   constructor() { 
   }
 }
