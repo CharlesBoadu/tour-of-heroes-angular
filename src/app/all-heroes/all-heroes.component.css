@@ -15,6 +15,7 @@ h1 {
     font-size: 45pt;
     background-color: white;
     text-align: left;
+    padding-top: 40px;
 }
 
 h3 {
@@ -23,13 +24,12 @@ h3 {
 
 .content {
     width: 90vw;
-    margin: 0 auto;
 }
 
 main {
     background-color: white;
+    margin: 50px 0px;
     padding: 40px;
-    height: 90vh;
     text-align: center; /* Center the content horizontally */
 }
 
@@ -52,48 +52,40 @@ a {
     font-size: 20px;
 }
 
-h3 {
-    text-align: center;
-    font-weight: 500;
+.heroes-list {
     background-color: white;
+}
+
+h4 {
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    margin-top: 30px;
     font-size: 40px;
+    font-weight: 100;
 }
 
-.hero-details{
+.hero-container {
     background-color: white;
     display: flex;
-    justify-content: start;
-    margin-top: 40px;
-    /* flex-direction: column; */
+    justify-content: space-between;
+    width: 40%;
+    margin-top: 30px;
 }
 
-div {
-    display: flex;
-    justify-content: start;
-    background-color: white;
-    margin-top: 40px;
-    font-size: 20pt;
+.hero-number {
+    background-color: #3f525b;
+    color: white;
+    width: 25%;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .hero-name {
-    color: #3f525b;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-.hero-input {
-    background-color: white;
-    margin-left: 10px;
+    background-color: #dbdbdb;
+    width: 75%;
     padding: 20px;
-    width: 20vw;
-    font-size: 20px;
-    font-weight: bold
-}
-
-#back-button {
-    display: flex;
-    justify-content: start;
-    width: fit-content;
-    margin: 50px 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }

@@ -17,17 +17,17 @@ import { Hero } from '../hero';
         <a [routerLink]="['/heroes']" id="heroes-link"><span>Heroes</span></a>
       </nav>
       <section class="hero-details">
-        <h3>{{hero?.name?.toUpperCase()}} Details</h3>
+        <h3>{{ hero?.name?.toUpperCase() }} Details</h3>
       </section>
-      <div>
-        id: {{hero?.id}}
-      </div>
+      <div>id: {{ hero?.id }}</div>
       <div class="hero-name">
-        Hero name: <input type="text" class="hero-input">
+        Hero name:
+        <input type="text" class="hero-input" value="{{ hero?.name }}" #name (input)="
+          changeName(name.value)
+        "/>
       </div>
       <a [routerLink]="['']" id="back-button"><span>Back</span></a>
     </main>
-    
   </section>`,
   styleUrl: './hero-details.component.css',
 })
@@ -39,5 +39,11 @@ export class HeroDetailsComponent {
   constructor() {
     const heroId = parseInt(this.route.snapshot.params['id'], 10);
     this.hero = this.heroesService.getHeroById(heroId);
+  }
+
+  changeName(text: string) {
+    if (this.hero) {
+      this.hero.name = text;
+    }
   }
 }

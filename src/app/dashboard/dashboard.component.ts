@@ -18,6 +18,6 @@ export class DashboardComponent {
   heroesService: HeroesService = inject(HeroesService);
 
   constructor() {
-    this.heroList = this.heroesService.getAllHeroes();
+    this.heroList = this.heroesService.getTopHeroes();
   }
 }
