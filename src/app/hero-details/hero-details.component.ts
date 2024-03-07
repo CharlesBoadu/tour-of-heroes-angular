@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Location } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { HeroesService } from '../heroes.service';
 import { ActivatedRoute } from '@angular/router';
@@ -26,12 +27,13 @@ import { Hero } from '../hero';
           changeName(name.value)
         "/>
       </div>
-      <a [routerLink]="['']" id="back-button"><span>Back</span></a>
+      <a (click)="goBack()" id="back-button"><span>Back</span></a>
     </main>
   </section>`,
   styleUrl: './hero-details.component.css',
 })
 export class HeroDetailsComponent {
+  location: Location = inject(Location);
   route: ActivatedRoute = inject(ActivatedRoute);
   heroesService: HeroesService = inject(HeroesService);
   hero: Hero | undefined;
@@ -46,4 +48,10 @@ export class HeroDetailsComponent {
       this.hero.name = text;
     }
   }
+
+  goBack() {
+    // Navigates to the previous URL
+    this.location.back();
+  }
+
 }
