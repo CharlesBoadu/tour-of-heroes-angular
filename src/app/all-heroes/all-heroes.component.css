@@ -1,0 +1,91 @@
+* {
+    --primary-color: #33669a;
+    --secondary-color: #3f525b;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Specify a default font */
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 45pt;
+    background-color: white;
+    text-align: left;
+    padding-top: 40px;
+}
+
+h3 {
+    background-color: white;
+}
+
+.content {
+    width: 90vw;
+}
+
+main {
+    background-color: white;
+    margin: 50px 0px;
+    padding: 40px;
+    text-align: center; /* Center the content horizontally */
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: start;
+}
+
+#dashboard-link {
+    margin-left: 0px;
+}
+
+a {
+    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.heroes-list {
+    background-color: white;
+}
+
+h4 {
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    margin-top: 30px;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.hero-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-top: 30px;
+}
+
+.hero-number {
+    background-color: #3f525b;
+    color: white;
+    width: 25%;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.hero-name {
+    background-color: #dbdbdb;
+    width: 75%;
+    padding: 20px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
